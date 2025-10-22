@@ -45,4 +45,13 @@ class CarroController extends Controller
 
         return redirect('/deleta_carro');
     }
+
+        public function alterar_carro ($id)
+    {
+        $carro = Carro::find($id);
+
+        return view('alterar_carro')->with('carro', $carro);
+
+    }
+
 }
