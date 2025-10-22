@@ -54,4 +54,20 @@ class CarroController extends Controller
 
     }
 
+
+        public function muda_carro(Request $request)
+    {
+        $carro = Carro::find($request->id);
+        $carro->nome = $request->input('nome');
+        $carro->modelo = $request->input('modelo');
+        $carro->data_fabri = $request->input('data_fabri');
+        $carro->endereco = $request->input('endereco');
+        $carro->kilometragem = $request->input('kilometragem');
+        $carro->preco = $request->input('preco');
+        $carro->save();
+
+        return redirect('/alterar_carro');
+    
+
+}
 }

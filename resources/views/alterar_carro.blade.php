@@ -123,7 +123,7 @@
         .form-control {
             background-color: rgba(40, 40, 40, 0.8);
             border: 1px solid rgba(212, 175, 55, 0.3);
-            color: #000000;
+            color: #ffffff;
             border-radius: 8px;
             padding: 12px 15px;
             transition: all 0.3s ease;
@@ -219,7 +219,7 @@
             <div class="col-lg-6 col-md-8 col-sm-12">
                 <div class="card shadow-sm rounded">
                     <div class="card-header text-white">
-                        <h5 class="mb-0">Cadastrar Notícia</h5>
+                        <h5 class="mb-0">Cadastrar carro</h5>
                     </div>
                     <div class="card-body">
                         <form action="{{route('alterar_carro')}}" method="POST">
@@ -237,27 +237,39 @@
                              <!-- Título -->
                             <div class="mb-3">
                                 <label for="categoria" class="form-label">Modelo</label>
-                                <input type="text" name="categoria" id="categoria" value="{{$noticia->categoria}}" class="form-control form-control-sm"
+                                <input type="text" name="modelo" id="modelo" value="{{$carro->modelo}}" class="form-control form-control-sm"
                                     placeholder="Digite o título da categoria" required>
                             </div>
 
                             <!-- Jornalista -->
                             <div class="mb-3">
-                                <label for="autor" class="form-label">Nome do Jornalista</label>
-                                <input type="text" name="autor" value="{{$noticia->autor}}" id="autor" class="form-control form-control-sm"
+                                <label for="autor" class="form-label">Data de fabricação</label>
+                                <input type="text" name="data_fabri" value="{{$carro->data_fabri}}" id="data_fabri" class="form-control form-control-sm"
                                     placeholder="Digite o nome do autor" required>
                             </div>
 
                             <!-- Corpo -->
                             <div class="mb-3">
-                                <label for="conteudo" class="form-label">Corpo da Notícia</label>
-                                <textarea name="conteudo" id="conteudo" class="form-control form-control-sm" rows="5"
-                                    placeholder="Escreva a notícia aqui..." required>{{$noticia->conteudo}}</textarea>
+                                <label for="autor" class="form-label">seu endereço</label>
+                                <input type="text" name="endereco" value="{{$carro->endereco}}" id="endereco" class="form-control form-control-sm"
+                                    placeholder="Digite o nome do autor" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="autor" class="form-label">quilometragem do carro</label>
+                                <input type="text" name="kilometragem" value="{{$carro->kilometragem}}" id="kilometragem" class="form-control form-control-sm"
+                                    placeholder="Digite o nome do autor" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="autor" class="form-label">preço</label>
+                                <input type="text" name="preco" value="{{$carro->preco}}" id="preco" class="form-control form-control-sm"
+                                    placeholder="Digite o nome do autor" required>
                             </div>
 
                             <!-- Botão -->
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-warning btn-sm">Alterar Notícia</button>
+                                <button type="submit" class="btn btn-warning btn-sm">Alterar formulario</button>
                             </div>
                         </form>
                     </div>

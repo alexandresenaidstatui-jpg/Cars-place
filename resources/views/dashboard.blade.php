@@ -331,7 +331,7 @@
 <nav class="sidebar">
   <img style="width: 175px ; margin-left: 15px; margin-bottom: 15px;" src="katas.png" alt="">
   <a href="#" class="active">Dashboard</a>
-  <a href="#">Veículos</a>
+  <a href="{{ route('carros') }}">Veículos</a>
   <a href="#">Clientes</a>
   <a href="#">Vendas</a>
   <a href="#">Relatórios</a>
@@ -368,6 +368,7 @@
 
   <section>
     <h3 style="color: var(--gold); margin-bottom: 1rem; letter-spacing: 1.2px;">Últimas Vendas</h3>
+
     <table>
       <thead>
         <tr>
@@ -426,6 +427,5 @@
     }
   });
 </script>
-
 </body>
 </html>

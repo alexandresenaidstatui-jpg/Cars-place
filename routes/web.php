@@ -28,8 +28,11 @@ Route::post('/deleta_carro/carro',[CarroController::class,'deleta'])->name('dele
 
 Route::get('/alterar_carro/{id}', [CarroController::class, 'alterar_carro']); 
 
-Route::get('/', function () {
-    return view('dasboard');
-});
+Route::post('/muda_carro',[CarroController::class,'muda_carro'])->name('alterar_carro');
+
+Route::get('/carros', function () {
+    return view('carros');
+})->name('carros');
+
 
 require __DIR__.'/auth.php';
