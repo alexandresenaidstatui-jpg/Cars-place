@@ -2,6 +2,7 @@
 use App\Http\Controllers\CarroController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Carro;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,5 +25,18 @@ Route::post('/salvar/carro',[CarroController::class,'salvar_carro'])->name('form
 Route::get('/deleta_carro/{id}', [CarroController::class, 'deleta_carro']);
 
 Route::post('/deleta_carro/carro',[CarroController::class,'deleta'])->name('deleta_carro');
+
+Route::get('/alterar_carro/{id}', [CarroController::class, 'alterar_carro']); 
+
+Route::post('/muda_carro',[CarroController::class,'muda_carro'])->name('alterar_carro');
+
+Route::get('/carros', function () {
+    return view('carros');
+})->name('carros');
+
+Route::get('/estoque', function () {
+    return view('estoque');
+})->name('estoque');
+
 
 require __DIR__.'/auth.php';

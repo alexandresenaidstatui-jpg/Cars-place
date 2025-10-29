@@ -23,6 +23,7 @@ class CarroController extends Controller
         $model_Carro->endereco = $request->endereco;
         $model_Carro->kilometragem = $request->kilometragem;
         $model_Carro->preco = $request->preco;
+        $model_Carro->imagem = $request->imagem;
 
         $model_Carro->save();
 
@@ -45,4 +46,29 @@ class CarroController extends Controller
 
         return redirect('/deleta_carro');
     }
+
+        public function alterar_carro ($id)
+    {
+        $carro = Carro::find($id);
+
+        return view('alterar_carro')->with('carro', $carro);
+
+    }
+
+
+        public function muda_carro(Request $request)
+    {
+        $carro = Carro::find($request->id);
+        $carro->nome = $request->input('nome');
+        $carro->modelo = $request->input('modelo');
+        $carro->data_fabri = $request->input('data_fabri');
+        $carro->endereco = $request->input('endereco');
+        $carro->kilometragem = $request->input('kilometragem');
+        $carro->preco = $request->input('preco');
+        $carro->save();
+
+        return redirect('/alterar_carro');
+    
+
+}
 }
