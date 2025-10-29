@@ -255,6 +255,11 @@
                                 <label for="preco" class="form-label">Preço (R$)</label>
                                 <input type="number" name="preco" id="preco" class="form-control" placeholder="Ex: 75000" step="0.01" required>
                             </div>
+                       
+                            <div class="form-group">
+                                <label for="imagem" class="form-label">imagem</label>
+                                <input type="text" name="imagem" id="imagem" class="form-control" placeholder="Ex: 75000" step="0.01" required>
+                            </div>
                             
                             <div class="d-grid mt-4">
                                 <button type="submit" class="btn btn-primary btn-lg">Registrar Carro</button>

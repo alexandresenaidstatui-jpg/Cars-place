@@ -16,5 +16,8 @@ class Carro extends Model
 		'data_fabri',
 		'endereco',
         'kilometragem',
-        'preco'];
+        'preco',
+		'imagem'
+	
+	];
 }

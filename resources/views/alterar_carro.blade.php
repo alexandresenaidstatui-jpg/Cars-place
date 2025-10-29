@@ -228,6 +228,7 @@
                             <input type="text" id="id" name="id" hidden value="{{$carro->id}}">
 
                             <!-- Título -->
+                                 <img src="{{ asset($carro->imagem) }}" alt="">
                             <div class="mb-3">
                                 <label for="titulo" class="form-label">Nome</label>
                                 <input type="text" name="nome" value="{{$carro->nome}}" id="nome" class="form-control form-control-sm"

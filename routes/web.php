@@ -34,5 +34,9 @@ Route::get('/carros', function () {
     return view('carros');
 })->name('carros');
 
+Route::get('/estoque', function () {
+    return view('estoque');
+})->name('estoque');
+
 
 require __DIR__.'/auth.php';

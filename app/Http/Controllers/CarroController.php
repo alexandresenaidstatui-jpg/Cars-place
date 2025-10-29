@@ -23,6 +23,7 @@ class CarroController extends Controller
         $model_Carro->endereco = $request->endereco;
         $model_Carro->kilometragem = $request->kilometragem;
         $model_Carro->preco = $request->preco;
+        $model_Carro->imagem = $request->imagem;
 
         $model_Carro->save();
 
